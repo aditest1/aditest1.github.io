@@ -1,0 +1,521 @@
+{
+    "questions": [
+        {
+            "type": "mcq",
+            "question": "Which of the following microorganisms causes malaria?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Protozoa"
+        },
+        {
+            "type": "mcq",
+            "question": "Yeast is used in the production of:",
+            "options": [
+                "Vinegar",
+                "Antibiotics",
+                "Cheese",
+                "Bread"
+            ],
+            "answer": "Bread"
+        },
+        {
+            "type": "mcq",
+            "question": "Antibiotics are effective against:",
+            "options": [
+                "Viruses",
+                "Fungi",
+                "Bacteria",
+                "Protozoa"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "The process of conversion of sugar into alcohol is called:",
+            "options": [
+                "Fermentation",
+                "Decomposition",
+                "Photosynthesis",
+                "Respiration"
+            ],
+            "answer": "Fermentation"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following microorganisms is used in the production of antibiotics?",
+            "options": [
+                "Penicillium",
+                "Saccharomyces",
+                "Lactobacillus",
+                "Rhizobium"
+            ],
+            "answer": "Penicillium"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is responsible for fixing nitrogen in the soil?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Yeast",
+                "Amoeba"
+            ],
+            "answer": "Rhizobium"
+        },
+        {
+            "type": "mcq",
+            "question": "Anthrax is caused by:",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism causes the disease cholera?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "The process of conversion of milk into curd is due to the action of:",
+            "options": [
+                "Rhizobium",
+                "Lactobacillus",
+                "Penicillium",
+                "Saccharomyces"
+            ],
+            "answer": "Lactobacillus"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the biological treatment of sewage?",
+            "options": [
+                "Algae",
+                "Virus",
+                "Bacteria",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Ringworm is caused by:",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Fungi",
+                "Protozoa"
+            ],
+            "answer": "Fungi"
+        },
+        {
+            "type": "mcq",
+            "question": "HIV (Human Immunodeficiency Virus) causes:",
+            "options": [
+                "Common cold",
+                "Tuberculosis",
+                "AIDS",
+                "Cholera"
+            ],
+            "answer": "AIDS"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the preparation of idli and dosa batter?",
+            "options": [
+                "Rhizobium",
+                "Saccharomyces",
+                "Lactobacillus",
+                "Aspergillus"
+            ],
+            "answer": "Lactobacillus"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of biogas?",
+            "options": [
+                "Methanogens",
+                "Rhizobium",
+                "Penicillium",
+                "Algae"
+            ],
+            "answer": "Methanogens"
+        },
+        {
+            "type": "mcq",
+            "question": "Tetanus is caused by:",
+            "options": [
+                "Bacteria",
+                "Virus",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of antibiotics such as streptomycin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Lactobacillus"
+            ],
+            "answer": "Streptomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following microorganisms helps in nitrogen fixation in leguminous plants?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Aspergillus"
+            ],
+            "answer": "Rhizobium"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism causes athlete's foot?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Fungi",
+                "Protozoa"
+            ],
+            "answer": "Fungi"
+        },
+        {
+            "type": "mcq",
+            "question": "The disease 'dengue' is caused by:",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Virus"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the preparation of antibiotics like penicillin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Lactobacillus"
+            ],
+            "answer": "Penicillium"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism causes food poisoning?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following is a beneficial role of microorganisms in agriculture?",
+            "options": [
+                "Causing diseases in crops",
+                "Reducing soil fertility",
+                "Fixing nitrogen in the soil",
+                "Increasing soil erosion"
+            ],
+            "answer": "Fixing nitrogen in the soil"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of antibiotics such as tetracycline?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Streptomyces"
+            ],
+            "answer": "Streptomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of alcohol?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Lactobacillus"
+            ],
+            "answer": "Saccharomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following diseases is caused by a virus?",
+            "options": [
+                "Tuberculosis",
+                "Cholera",
+                "AIDS",
+                "Typhoid"
+            ],
+            "answer": "AIDS"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism causes dental caries?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "The process of conversion of nitrogen gas into nitrates is called:",
+            "options": [
+                "Nitrogen fixation",
+                "Fermentation",
+                "Photosynthesis",
+                "Respiration"
+            ],
+            "answer": "Nitrogen fixation"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the treatment of industrial effluents?",
+            "options": [
+                "Algae",
+                "Virus",
+                "Bacteria",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the baking industry?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Lactobacillus"
+            ],
+            "answer": "Saccharomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following is a disease caused by bacteria?",
+            "options": [
+                "Measles",
+                "Typhoid",
+                "AIDS",
+                "Influenza"
+            ],
+            "answer": "Typhoid"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of vinegar?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Acetobacter"
+            ],
+            "answer": "Acetobacter"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following diseases is caused by protozoa?",
+            "options": [
+                "Malaria",
+                "Tuberculosis",
+                "Cholera",
+                "AIDS"
+            ],
+            "answer": "Malaria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the preparation of antibiotics like erythromycin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Streptomyces"
+            ],
+            "answer": "Streptomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism causes the disease tuberculosis?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "The process of decomposition of complex organic substances into simpler ones is known as:",
+            "options": [
+                "Fermentation",
+                "Respiration",
+                "Decomposition",
+                "Photosynthesis"
+            ],
+            "answer": "Decomposition"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is responsible for the formation of curd from milk?",
+            "options": [
+                "Rhizobium",
+                "Lactobacillus",
+                "Penicillium",
+                "Saccharomyces"
+            ],
+            "answer": "Lactobacillus"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following is a role of microorganisms in maintaining soil fertility?",
+            "options": [
+                "Causing plant diseases",
+                "Fixing nitrogen in soil",
+                "Preventing erosion",
+                "Reducing soil pH"
+            ],
+            "answer": "Fixing nitrogen in soil"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of antibiotics such as neomycin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Streptomyces",
+                "Lactobacillus"
+            ],
+            "answer": "Streptomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is responsible for causing diseases like ringworm?",
+            "options": [
+                "Virus",
+                "Bacteria",
+                "Protozoa",
+                "Fungi"
+            ],
+            "answer": "Fungi"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following diseases is caused by a virus?",
+            "options": [
+                "Typhoid",
+                "Tuberculosis",
+                "AIDS",
+                "Cholera"
+            ],
+            "answer": "AIDS"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of enzymes for commercial purposes?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Aspergillus",
+                "Saccharomyces"
+            ],
+            "answer": "Aspergillus"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the bioremediation of oil spills?",
+            "options": [
+                "Algae",
+                "Virus",
+                "Bacteria",
+                "Fungi"
+            ],
+            "answer": "Algae"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following is a beneficial role of microorganisms in the nitrogen cycle?",
+            "options": [
+                "Reducing soil fertility",
+                "Fixing nitrogen in the soil",
+                "Causing soil erosion",
+                "Preventing nutrient cycling"
+            ],
+            "answer": "Fixing nitrogen in the soil"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of antibiotics such as cephalosporin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Streptomyces"
+            ],
+            "answer": "Streptomyces"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the treatment of sewage water?",
+            "options": [
+                "Algae",
+                "Virus",
+                "Bacteria",
+                "Fungi"
+            ],
+            "answer": "Bacteria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which of the following is a disease caused by protozoa?",
+            "options": [
+                "Cholera",
+                "Tuberculosis",
+                "Malaria",
+                "AIDS"
+            ],
+            "answer": "Malaria"
+        },
+        {
+            "type": "mcq",
+            "question": "Which microorganism is used in the production of antibiotics such as vancomycin?",
+            "options": [
+                "Rhizobium",
+                "Penicillium",
+                "Saccharomyces",
+                "Streptomyces"
+            ],
+            "answer": "Streptomyces"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1 class="text-3xl text-center">Crop Production and Management</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter One</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="renderer.js"></script>
+    <script>
+        window.onload = () => {
+            document.getElementById("questionForm").onsubmit = (event) => {
+                event.preventDefault();
+                const selectedOption = document.querySelector('input[name="questionType"]:checked').value;
+                render(1, selectedOption);
+                document.getElementById("prog").max = document.body.children.length;
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-zinc-900 text-white flex flex-col justify-center items-center gap-2">
+    <form id="questionForm" class="flex flex-col items-center gap-4">
+        <p>What type of questions do you want?</p>
+        <div class="flex gap-4">
+            <label>
+                <input type="radio" name="questionType" value="assertion" class="mr-2"> Assertion and Reason
+            </label>
+            <label>
+                <input type="radio" name="questionType" value="mcq" class="mr-2"> MCQ
+            </label>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+    </form>
+    <progress value="0" max="" id="prog" class="w-1/2 h-1 bg-white rounded-full"></progress>
+    <div id="questionContainer" class="mt-4"></div>
+</body>
+
+</html>
