@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispersion of Light</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-bottom: 2px solid #333;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #f5f5f5;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .option {
+            background-color: #000000;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .option:hover {
+            background-color: #333;
+        }
+
+        .option:hover .text-highlight {
+            color: yellow;
+        }
+
+        .option .icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            padding: 0;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .content.open {
+            max-height: 800px;
+            padding: 20px 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .content p:hover {
+            color: yellow;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            width: 300px;
+            height: 300px;
+            background: url('static/dispersion.png') no-repeat center center;
+            background-size: cover;
+            border: 20px solid #121212;
+            border-radius: 0;
+        }
+
+        .image-options {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-options button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-size: 16px;
+        }
+
+        .image-options button:hover {
+            background-color: yellow;
+            color: black;
+            box-shadow: 0 0 15px yellow;
+        }
+
+        .interactive-info {
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .interactive-info h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #f5f5f5;
+        }
+
+        .interactive-info p {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .interactive-info input, .interactive-info button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+        }
+
+        .interactive-info input {
+            width: calc(100% - 22px);
+        }
+
+        .interactive-info button {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .interactive-info button:hover {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dispersion of Light</h1>
+    </div>
+
+    <div class="content-container">
+        <div class="sidebar">
+            <div class="dropdown">
+                <div class="option" onclick="toggleDropdown(this)">
+                    <span class="text-highlight">Basics of Dispersion</span> <span class="icon">+</span>
+                </div>
+                <div class="content">
+                    <p>
+                        Dispersion occurs when light is separated into its constituent colors due to different wavelengths being refracted by different amounts. This effect can be observed in rainbows and prisms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="option" onclick="toggleDropdown(this)">
+                    <span class="text-highlight">Practical Examples</span> <span class="icon">+</span>
+                </div>
+                <div class="content">
+                    <p>
+                        Dispersion is commonly seen in prisms, where white light is split into a spectrum of colors. Rainbows are a natural example of dispersion caused by raindrops acting as tiny prisms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="option" onclick="toggleDropdown(this)">
+                    <span class="text-highlight">Mathematical Models</span> <span class="icon">+</span>
+                </div>
+                <div class="content">
+                    <p>
+                        The dispersion of light can be described using mathematical models such as the Cauchy equation, which relates the refractive index to the wavelength of light. This helps in understanding and predicting the dispersion in different materials.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image"></div>
+            <div class="image-options">
+                <button onclick="reloadImage()">Reload Image</button>
+            </div>
+
+            <div class="interactive-info">
+                <h2>Interactive Analysis</h2>
+                <p>Enter a wavelength (in nm) to see the corresponding color:</p>
+                <input type="number" id="wavelengthInput" placeholder="Enter wavelength (380-750 nm)">
+                <button onclick="showColor()">Show Color</button>
+                <div id="colorResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.icon');
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                document.querySelectorAll('.content.open').forEach((openContent) => {
+                    openContent.classList.remove('open');
+                    openContent.previousElementSibling.querySelector('.icon').textContent = '+';
+                });
+
+                content.classList.add('open');
+                icon.textContent = '−'; 
+            }
+        }
+
+        function reloadImage() {
+            const image = document.querySelector('.image');
+            image.style.backgroundImage = `url('static/dispersion.png?${new Date().getTime()})`;
+        }
+
+        function showColor() {
+            const wavelength = document.getElementById('wavelengthInput').value;
+            const colorResult = document.getElementById('colorResult');
+
+            if (wavelength >= 380 && wavelength <= 750) {
+                let color;
+                if (wavelength < 440) color = '#5D4F8C'; // Violet
+                else if (wavelength < 490) color = '#4B92DB'; // Blue
+                else if (wavelength < 510) color = '#3D9B4F'; // Green
+                else if (wavelength < 580) color = '#B5E350'; // Yellow
+                else if (wavelength < 645) color = '#F4B830'; // Orange
+                else color = '#F75C03'; // Red
+
+                colorResult.innerHTML = `<div style="width: 100px; height: 100px; background-color: ${color};"></div>`;
+            } else {
+                colorResult.innerHTML = `<p style="color: red;">Wavelength out of range. Please enter a value between 380 and 750 nm.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
