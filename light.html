@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            overflow: auto;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Content Styles */
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Information Block Styles */
+        .info-block {
+            background-color: #2E2E2E;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-block:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .info-block h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #FFD700;
+            transition: color 0.3s;
+        }
+
+        .info-block:hover h2 {
+            color: #FFDD00;
+        }
+
+        .info-block p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #CCCCCC;
+        }
+
+        .info-block ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            color: #CCCCCC;
+        }
+
+        .info-block ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #FF5722;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #FF3D00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div class="info-block">
+                <h2>Introduction to Light</h2>
+                <p>
+                    Light is a form of electromagnetic radiation that is visible to the human eye. It has properties of both waves and particles and travels through a vacuum at a speed of approximately 299,792 kilometers per second.
+                </p>
+            </div>
+
+            <div class="info-block">
+                <h2>Properties of Light</h2>
+                <p>
+                    Light exhibits several fundamental properties:
+                </p>
+                <ul>
+                    <li><strong>Reflection:</strong> The bouncing back of light from a surface.</li>
+                    <li><strong>Refraction:</strong> The bending of light as it passes from one medium to another.</li>
+                    <li><strong>Diffraction:</strong> The spreading of light as it passes through a narrow opening.</li>
+                    <li><strong>Interference:</strong> The combination of light waves resulting in constructive or destructive patterns.</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h2>Applications of Light</h2>
+                <p>
+                    Light has numerous applications across various fields:
+                </p>
+                <ul>
+                    <li><strong>Optics:</strong> Lenses, microscopes, and telescopes use light for magnification and imaging.</li>
+                    <li><strong>Photography:</strong> Cameras capture light to create images.</li>
+                    <li><strong>Communications:</strong> Fiber optics use light for high-speed data transmission.</li>
+                    <li><strong>Medicine:</strong> Endoscopes and laser treatments utilize light for diagnostic and therapeutic purposes.</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h2>Modern Light Technologies</h2>
+                <p>
+                    Recent advancements in light technology include:
+                </p>
+                <ul>
+                    <li><strong>LEDs:</strong> Light Emitting Diodes offer energy-efficient lighting solutions.</li>
+                    <li><strong>Laser Technology:</strong> Used in various applications including medical, industrial, and entertainment fields.</li>
+                    <li><strong>OLEDs:</strong> Organic Light Emitting Diodes are used in displays for high-quality visuals.</li>
+                    <li><strong>Quantum Dots:</strong> Enhance color accuracy and brightness in displays.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

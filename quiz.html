@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .question {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .choices {
+            margin-bottom: 20px;
+        }
+
+        .choice {
+            display: block;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #2c2c2c;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .choice:hover {
+            background-color: #3a3a3a;
+            transform: scale(1.02);
+        }
+
+        .choice.correct {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+
+        .choice.incorrect {
+            background-color: #f44336;
+            color: #ffffff;
+        }
+
+        .choice.selected {
+            border: 2px solid #4a90e2;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+            transform: scale(1.02);
+        }
+
+        .btn:disabled {
+            background-color: #7a7a7a;
+            cursor: not-allowed;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #b0b0b0;
+            text-align: left;
+        }
+
+        .feedback {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modern Quiz</h1>
+        <div class="question" id="question">Loading question...</div>
+        <div class="choices" id="choices"></div>
+        <div class="feedback" id="feedback"></div>
+        <div class="explanation" id="explanation"></div>
+        <button class="btn" id="nextBtn" onclick="loadQuestion()" disabled>Next Question</button>
+    </div>
+
+    <script>
+        let correctAnswer = '';
+        let questions = [];
+        let isAnswered = false;
+
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.json');
+                const data = await response.json();
+                questions = data.questions;
+                loadQuestion();
+            } catch (error) {
+                console.error('Error fetching questions:', error);
+                document.getElementById('question').textContent = 'Failed to load question.';
+            }
+        }
+
+        function loadQuestion() {
+            if (questions.length === 0) {
+                document.getElementById('question').textContent = 'No questions available.';
+                return;
+            }
+
+            isAnswered = false;
+            document.getElementById('nextBtn').disabled = true;
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('explanation').style.display = 'none';
+
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            const question = questions[randomIndex];
+            
+            document.getElementById('question').textContent = question.question;
+            
+            const choicesContainer = document.getElementById('choices');
+            choicesContainer.innerHTML = '';
+            question.choices.forEach(choice => {
+                const choiceElement = document.createElement('div');
+                choiceElement.className = 'choice';
+                choiceElement.textContent = choice.text;
+                choiceElement.onclick = () => selectChoice(choice.text, question.correctAnswer);
+                choicesContainer.appendChild(choiceElement);
+            });
+
+            correctAnswer = question.correctAnswer;
+            document.getElementById('explanation').textContent = question.explanation;
+        }
+
+        function selectChoice(choiceText, correctAnswer) {
+            if (isAnswered) return;
+
+            const choices = document.querySelectorAll('.choice');
+            let isCorrect = choiceText === correctAnswer;
+
+            choices.forEach(c => {
+                c.classList.remove('selected');
+                if (c.textContent === choiceText) {
+                    c.classList.add('selected');
+                }
+            });
+
+            const feedback = document.getElementById('feedback');
+            if (isCorrect) {
+                feedback.textContent = 'Correct! 🎉';
+                feedback.style.color = '#4caf50';
+                document.querySelectorAll('.choice').forEach(c => {
+                    if (c.textContent === correctAnswer) {
+                        c.classList.add('correct');
+                    }
+                });
+            } else {
+                feedback.textContent = 'Incorrect. Try again!';
+                feedback.style.color = '#f44336';
+                document.querySelectorAll('.choice').forEach(c => {
+                    if (c.textContent === choiceText) {
+                        c.classList.add('incorrect');
+                    }
+                });
+                document.getElementById('explanation').style.display = 'block';
+            }
+            isAnswered = true;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        // Load questions when the page loads
+        window.onload = loadQuestions;
+    </script>
+</body>
+</html>

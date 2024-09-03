@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Disk</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 0 50px;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .option {
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .option:hover {
+            background-color: #333;
+        }
+
+        .option:hover .text-highlight {
+            color: yellow;
+        }
+
+        .option .icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            padding: 0;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .content.open {
+            max-height: 400px; /* Adjust as needed */
+            padding: 20px 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .content p:hover {
+            color: yellow;
+        }
+
+        .disk-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .disk {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: conic-gradient(red, yellow, green, cyan, blue, magenta, red);
+            border: 20px solid #121212;
+            transition: filter 0.5s ease;
+            position: relative;
+        }
+
+        .disk.spinning {
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .disk-options {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .disk-options button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-size: 16px;
+        }
+
+        .disk-options button:hover {
+            background-color: yellow;
+            color: black;
+            box-shadow: 0 0 15px yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="dropdown">
+            <div class="option" onclick="toggleDropdown(this)">
+                <span class="text-highlight">How It Works</span> <span class="icon">+</span>
+            </div>
+            <div class="content">
+                <p>
+                    Newton's disk demonstrates additive color mixing, where different colors of light combine to produce white light. When spun rapidly, the colors blend together because the eye cannot distinguish them separately at high speeds.
+                </p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="option" onclick="toggleDropdown(this)">
+                <span class="text-highlight">Why It Happens</span> <span class="icon">+</span>
+            </div>
+            <div class="content">
+                <p>
+                    The effect occurs due to the persistence of vision and the way our eyes process color. As the disk spins, the individual colors merge, and the brain perceives the combined effect as white light.
+                </p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="option" onclick="toggleDropdown(this)">
+                <span class="text-highlight">Implications</span> <span class="icon">+</span>
+            </div>
+            <div class="content">
+                <p>
+                    Newton's disk is a foundational experiment in optics, showing that white light is composed of various colors. This experiment laid the groundwork for understanding light and color theory in science.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="disk-container">
+        <div class="disk"></div>
+        <div class="disk-options">
+            <button onclick="startSpin()">Spin</button>
+            <button onclick="stopSpin()">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.icon');
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                document.querySelectorAll('.content.open').forEach((openContent) => {
+                    openContent.classList.remove('open');
+                    openContent.previousElementSibling.querySelector('.icon').textContent = '+';
+                });
+
+                content.classList.add('open');
+                icon.textContent = '−'; 
+            }
+        }
+
+        const disk = document.querySelector('.disk');
+        let spinSpeed = 20;
+        let brightness = 100; 
+        let spinningInterval;
+        let brighteningInterval;
+        let currentDuration = 10;
+
+        function startSpin() {
+            stopSpin(); 
+
+            disk.classList.add('spinning');
+            
+            spinningInterval = setInterval(() => {
+                currentDuration *=0.9;
+                disk.style.animationDuration = `${currentDuration}s`;
+            }, 1000);
+
+            brighteningInterval = setInterval(() => {
+                brightness = Math.min(brightness + 10, 200); 
+                disk.style.filter = `brightness(${brightness}%)`;
+            }, 500);
+        }
+
+        function stopSpin() {
+            clearInterval(spinningInterval);
+            clearInterval(brighteningInterval);
+            disk.classList.remove('spinning');
+            disk.style.animationDuration = '5s'; 
+            disk.style.filter = 'brightness(100%)'; 
+            currentDuration = 5; 
+            brightness = 100;
+        }
+    </script>
+
+</body>
+</html>

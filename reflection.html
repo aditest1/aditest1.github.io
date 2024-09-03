@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Reflection Simulator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 350px;
+            background-color: #1E1E1E;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .section h3::before {
+            content: '➤';
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .section-content.open {
+            max-height: 1000px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #CCCCCC;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            color: #CCCCCC;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Simulation Container */
+        .simulation-container {
+            width: 800px;
+            height: 500px;
+            background-color: #2A2A2A;
+            border: 2px solid #444;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Surface Line */
+        .surface-line {
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FFFFFF;
+        }
+
+        /* Normal Line */
+        .normal-line {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #FFFFFF;
+        }
+
+        /* Incident Ray */
+        .incident-ray {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 2px;
+            height: 200%;
+            background-color: #FF4500;
+            transform-origin: bottom;
+            transform: rotate(-45deg);
+            transition: transform 0.5s ease;
+        }
+
+        /* Reflected Ray */
+        .reflected-ray {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 2px;
+            height: 200%;
+            background-color: #00BFFF;
+            transform-origin: bottom;
+            transform: rotate(45deg);
+            transition: transform 0.5s ease;
+        }
+
+        /* Angle Indicators */
+        .angle-indicator {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px dashed #FFFFFF;
+            transform-origin: center;
+        }
+
+        .angle-text {
+            position: absolute;
+            bottom: 55%;
+            left: 55%;
+            font-size: 18px;
+            color: #FFD700;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .controls label {
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        .controls input[type="range"] {
+            width: 200px;
+        }
+
+        .controls select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        /* Waveform Container */
+        .waveform-container {
+            width: 800px;
+            height: 200px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .waveform {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 49%, rgba(255, 255, 255, 0.2) 50%, transparent 51%);
+            background-size: 50px 100%;
+            animation: moveWave 2s linear infinite;
+            opacity: 0.5;
+        }
+
+        .waveform.incident {
+            background-color: #FF4500;
+            clip-path: polygon(0 0, 50% 100%, 0 100%);
+        }
+
+        .waveform.reflected {
+            background-color: #00BFFF;
+            clip-path: polygon(50% 0, 100% 100%, 50% 100%);
+        }
+
+        @keyframes moveWave {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 50px 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1000px) {
+            .simulation-container, .waveform-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 50vh;
+                overflow-y: scroll;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Reflection Concepts</h2>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Introduction to Reflection</h3>
+            <div class="section-content">
+                <p>
+                    Reflection is a fundamental phenomenon observed when waves, such as light, sound, or water waves, encounter a boundary or interface between different media. The wave changes direction and returns into the medium from which it originated. Understanding reflection is crucial in various fields including optics, acoustics, and electromagnetic theory.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Laws of Reflection</h3>
+            <div class="section-content">
+                <p>
+                    The laws of reflection govern how waves reflect off surfaces. There are two primary laws:
+                </p>
+                <ul>
+                    <li><strong>First Law:</strong> The incident ray, the reflected ray, and the normal to the surface at the point of incidence all lie in the same plane.</li>
+                    <li><strong>Second Law:</strong> The angle of incidence is equal to the angle of reflection (<em>θ<sub>i</sub> = θ<sub>r</sub></em>).</li>
+                </ul>
+                <p>
+                    These laws apply universally to all types of waves and are foundational in designing optical instruments and understanding wave behaviors.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Types of Reflection</h3>
+            <div class="section-content">
+                <p>
+                    Reflection can be categorized based on the nature of the reflecting surface and the resulting reflected waves:
+                </p>
+                <ul>
+                    <li><strong>Specular Reflection:</strong> Occurs on smooth surfaces where the reflected rays are parallel, producing clear and sharp images (e.g., mirrors).</li>
+                    <li><strong>Diffuse Reflection:</strong> Occurs on rough surfaces where the reflected rays scatter in multiple directions, leading to no clear image formation (e.g., paper, cloth).</li>
+                    <li><strong>Glossy Reflection:</strong> Intermediate between specular and diffuse, where some directionality is maintained but with some scattering (e.g., polished wood).</li>
+                </ul>
+                <p>
+                    Understanding these types helps in material science and engineering applications where control over reflection properties is essential.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Mathematical Formulation</h3>
+            <div class="section-content">
+                <p>
+                    The behavior of reflected waves can be described mathematically using vector analysis and wave equations.
+                </p>
+                <p>
+                    <strong>For Light Waves:</strong> The reflection of electromagnetic waves can be described using Maxwell's equations and boundary conditions at interfaces:
+                </p>
+                <p style="font-style: italic; color: #FFD700;">
+                    E<sub>r</sub> = E<sub>i</sub> (n<sub>1</sub> - n<sub>2</sub>)/(n<sub>1</sub> + n<sub>2</sub>)
+                </p>
+                <p>
+                    Where:
+                    <ul>
+                        <li>E<sub>r</sub> = Electric field amplitude of reflected wave</li>
+                        <li>E<sub>i</sub> = Electric field amplitude of incident wave</li>
+                        <li>n<sub>1</sub>, n<sub>2</sub> = Refractive indices of the two media</li>
+                    </ul>
+                </p>
+                <p>
+                    This formulation is essential in designing anti-reflective coatings and understanding Fresnel equations.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Applications of Reflection</h3>
+            <div class="section-content">
+                <p>
+                    Reflection principles are applied extensively across various technologies and scientific fields:
+                </p>
+                <ul>
+                    <li><strong>Optical Devices:</strong> Mirrors, lenses, telescopes, and microscopes utilize reflection for image formation and light manipulation.</li>
+                    <li><strong>Acoustics:</strong> Soundproofing, auditorium design, and sonar technology rely on understanding sound wave reflection.</li>
+                    <li><strong>Medical Imaging:</strong> Ultrasound imaging uses reflection of sound waves to create images of internal body structures.</li>
+                    <li><strong>Communications:</strong> Radio wave reflection enables long-distance signal transmission via ionospheric reflection.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 onclick="toggleSection(this)">Quantum Reflection</h3>
+            <div class="section-content">
+                <p>
+                    In quantum mechanics, reflection phenomena can occur even when classical physics predicts no reflection, such as particles reflecting from potential barriers they classically shouldn't:
+                </p>
+                <p>
+                    <strong>Quantum Tunneling Reflection:</strong> Particles exhibit a non-zero probability of reflecting from a potential step or barrier, described by wavefunction solutions to Schrödinger's equation.
+                </p>
+                <p>
+                    This concept is crucial in understanding phenomena like electron behavior in semiconductors and the operation of quantum devices such as tunnel diodes.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="simulation-container">
+            <div class="surface-line"></div>
+            <div class="normal-line"></div>
+            <div class="incident-ray" id="incidentRay"></div>
+            <div class="reflected-ray" id="reflectedRay"></div>
+            <div class="angle-indicator" id="angleIndicator"></div>
+            <div class="angle-text" id="angleText">θ<sub>i</sub> = 45°</div>
+        </div>
+
+        <div class="controls">
+            <label for="angleRange">Angle of Incidence (°):</label>
+            <input type="range" id="angleRange" min="0" max="90" value="45" oninput="updateSimulation()">
+            <label for="materialSelect">Material:</label>
+            <select id="materialSelect" onchange="updateMaterial()">
+                <option value="1.0">Air (n=1.0)</option>
+                <option value="1.33">Water (n=1.33)</option>
+                <option value="1.5">Glass (n=1.5)</option>
+                <option value="2.42">Diamond (n=2.42)</option>
+            </select>
+        </div>
+
+        <div class="waveform-container">
+            <div class="waveform incident" id="incidentWaveform"></div>
+            <div class="waveform reflected" id="reflectedWaveform"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle Section Content
+        function toggleSection(element) {
+            const content = element.nextElementSibling;
+            content.classList.toggle('open');
+            element.querySelector('::before');
+            if (content.classList.contains('open')) {
+                element.style.color = '#FFD700';
+            } else {
+                element.style.color = '#FFFFFF';
+            }
+        }
+
+        // Simulation Elements
+        const incidentRay = document.getElementById('incidentRay');
+        const reflectedRay = document.getElementById('reflectedRay');
+        const angleIndicator = document.getElementById('angleIndicator');
+        const angleText = document.getElementById('angleText');
+        const incidentWaveform = document.getElementById('incidentWaveform');
+        const reflectedWaveform = document.getElementById('reflectedWaveform');
+        const angleRange = document.getElementById('angleRange');
+        const materialSelect = document.getElementById('materialSelect');
+
+        // Update Simulation
+        function updateSimulation() {
+            const angle = angleRange.value;
+            incidentRay.style.transform = `rotate(-${angle}deg)`;
+            reflectedRay.style.transform = `rotate(${angle}deg)`;
+            angleIndicator.style.transform = `rotate(-${angle}deg)`;
+            angleText.innerHTML = `θ<sub>i</sub> = ${angle}°`;
+            updateWaveforms(angle);
+        }
+
+        // Update Material
+        function updateMaterial() {
+            const refractiveIndex = materialSelect.value;
+            // Implement additional calculations based on refractive index if needed
+        }
+
+        // Update Waveforms
+        function updateWaveforms(angle) {
+            const incidentOpacity = 1 - (angle / 90);
+            const reflectedOpacity = angle / 90;
+            incidentWaveform.style.opacity = incidentOpacity;
+            reflectedWaveform.style.opacity = reflectedOpacity;
+        }
+
+        // Initialize Simulation
+        updateSimulation();
+    </script>
+
+</body>
+</html>

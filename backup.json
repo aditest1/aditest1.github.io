@@ -1,0 +1,950 @@
+{
+    "questions": [
+        {
+            "question": "What is the speed of light in a vacuum?",
+            "choices": [
+                {"text": "299,792 km/s"},
+                {"text": "150,000 km/s"},
+                {"text": "1,000 km/s"},
+                {"text": "500,000 km/s"}
+            ],
+            "correctAnswer": "299,792 km/s",
+            "explanation": "The speed of light in a vacuum is approximately 299,792 kilometers per second."
+        },
+        {
+            "question": "What phenomenon causes a rainbow to form?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Dispersion"},
+                {"text": "Absorption"}
+            ],
+            "correctAnswer": "Dispersion",
+            "explanation": "A rainbow forms due to dispersion, which is the splitting of light into its constituent colors when it passes through water droplets."
+        },
+        {
+            "question": "What type of lens is used to correct nearsightedness?",
+            "choices": [
+                {"text": "Convex lens"},
+                {"text": "Concave lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Cylindrical lens"}
+            ],
+            "correctAnswer": "Concave lens",
+            "explanation": "A concave lens is used to correct nearsightedness by diverging light rays so that they focus correctly on the retina."
+        },
+        {
+            "question": "What part of the eye controls the amount of light that enters?",
+            "choices": [
+                {"text": "Cornea"},
+                {"text": "Lens"},
+                {"text": "Iris"},
+                {"text": "Retina"}
+            ],
+            "correctAnswer": "Iris",
+            "explanation": "The iris is the colored part of the eye that controls the size of the pupil and thus regulates the amount of light entering the eye."
+        },
+        {
+            "question": "What is the bending of light as it passes from one medium to another called?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Diffraction"},
+                {"text": "Absorption"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "Refraction is the bending of light as it passes from one medium to another due to a change in its speed."
+        },
+        {
+            "question": "What is the primary source of light for Earth?",
+            "choices": [
+                {"text": "The Moon"},
+                {"text": "Artificial lights"},
+                {"text": "The Sun"},
+                {"text": "Stars"}
+            ],
+            "correctAnswer": "The Sun",
+            "explanation": "The primary source of light for Earth is the Sun, which provides the light necessary for life and weather patterns."
+        },
+        {
+            "question": "What is the term for the bouncing back of light when it hits a surface?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Diffraction"},
+                {"text": "Absorption"}
+            ],
+            "correctAnswer": "Reflection",
+            "explanation": "Reflection is the bouncing back of light when it hits a surface that does not absorb it."
+        },
+        {
+            "question": "Which part of the eye is responsible for focusing light onto the retina?",
+            "choices": [
+                {"text": "Lens"},
+                {"text": "Cornea"},
+                {"text": "Pupil"},
+                {"text": "Iris"}
+            ],
+            "correctAnswer": "Lens",
+            "explanation": "The lens of the eye focuses light onto the retina by changing its shape to adjust for near or distant vision."
+        },
+        {
+            "question": "What happens to light when it passes through a prism?",
+            "choices": [
+                {"text": "It reflects"},
+                {"text": "It absorbs"},
+                {"text": "It disperses"},
+                {"text": "It stays the same"}
+            ],
+            "correctAnswer": "It disperses",
+            "explanation": "When light passes through a prism, it disperses into its constituent colors due to refraction."
+        },
+        {
+            "question": "What is the angle between the incident ray and the normal called?",
+            "choices": [
+                {"text": "Angle of reflection"},
+                {"text": "Angle of refraction"},
+                {"text": "Angle of incidence"},
+                {"text": "Angle of dispersion"}
+            ],
+            "correctAnswer": "Angle of incidence",
+            "explanation": "The angle between the incident ray and the normal is called the angle of incidence."
+        },
+        {
+            "question": "What is the colored part of the eye that surrounds the pupil?",
+            "choices": [
+                {"text": "Sclera"},
+                {"text": "Cornea"},
+                {"text": "Iris"},
+                {"text": "Retina"}
+            ],
+            "correctAnswer": "Iris",
+            "explanation": "The iris is the colored part of the eye that surrounds the pupil and controls the amount of light entering the eye."
+        },
+        {
+            "question": "What type of image is formed by a concave mirror when the object is placed at a distance greater than the focal length?",
+            "choices": [
+                {"text": "Virtual and upright"},
+                {"text": "Real and inverted"},
+                {"text": "Virtual and inverted"},
+                {"text": "Real and upright"}
+            ],
+            "correctAnswer": "Real and inverted",
+            "explanation": "A concave mirror forms a real and inverted image when the object is placed at a distance greater than its focal length."
+        },
+        {
+            "question": "What is the phenomenon where light spreads out after passing through a small opening?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Diffraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction is the spreading out of light waves as they pass through a small opening or around an obstacle."
+        },
+        {
+            "question": "What part of the eye contains photoreceptor cells that detect light?",
+            "choices": [
+                {"text": "Retina"},
+                {"text": "Lens"},
+                {"text": "Cornea"},
+                {"text": "Iris"}
+            ],
+            "correctAnswer": "Retina",
+            "explanation": "The retina contains photoreceptor cells (rods and cones) that detect light and send visual signals to the brain."
+        },
+        {
+            "question": "What type of lens is used to correct farsightedness?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Cylindrical lens"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "A convex lens is used to correct farsightedness by converging light rays so they focus on the retina."
+        },
+        {
+            "question": "What type of mirror is used in a rearview mirror of a car?",
+            "choices": [
+                {"text": "Convex mirror"},
+                {"text": "Concave mirror"},
+                {"text": "Plane mirror"},
+                {"text": "Concave lens"}
+            ],
+            "correctAnswer": "Convex mirror",
+            "explanation": "A convex mirror is used in rearview mirrors because it provides a wider field of view by diverging light rays."
+        },
+        {
+            "question": "What is the process by which light is absorbed by a material called?",
+            "choices": [
+                {"text": "Absorption"},
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Absorption",
+            "explanation": "Absorption is the process by which light is taken in by a material rather than being reflected or transmitted."
+        },
+        {
+            "question": "What is the name of the optical phenomenon that makes objects appear bent in water?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"},
+                {"text": "Absorption"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "The bending of objects when they are viewed through water is due to the refraction of light."
+        },
+        {
+            "question": "Which type of lens causes parallel rays of light to converge to a point?",
+            "choices": [
+                {"text": "Convex lens"},
+                {"text": "Concave lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Cylindrical lens"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "A convex lens converges parallel rays of light to a single point called the focal point."
+        },
+        {
+            "question": "What happens to the wavelength of light as it moves from air to water?",
+            "choices": [
+                {"text": "It increases"},
+                {"text": "It decreases"},
+                {"text": "It stays the same"},
+                {"text": "It reverses"}
+            ],
+            "correctAnswer": "It decreases",
+            "explanation": "The wavelength of light decreases when it moves from air to water due to a change in speed."
+        },
+        {
+            "question": "What type of image is formed by a plane mirror?",
+            "choices": [
+                {"text": "Real and inverted"},
+                {"text": "Virtual and upright"},
+                {"text": "Real and upright"},
+                {"text": "Virtual and inverted"}
+            ],
+            "correctAnswer": "Virtual and upright",
+            "explanation": "A plane mirror forms a virtual and upright image that appears to be the same distance behind the mirror as the object is in front."
+        },
+        {
+            "question": "Which part of the eye adjusts to focus on objects at different distances?",
+            "choices": [
+                {"text": "Lens"},
+                {"text": "Iris"},
+                {"text": "Cornea"},
+                {"text": "Pupil"}
+            ],
+            "correctAnswer": "Lens",
+            "explanation": "The lens changes its shape to focus light on the retina, allowing the eye to see objects at various distances clearly."
+        },
+        {
+            "question": "What is the term for the splitting of light into its constituent colors?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"},
+                {"text": "Refraction"}
+            ],
+            "correctAnswer": "Dispersion",
+            "explanation": "Dispersion is the process by which light is separated into its component colors when passing through a prism or other medium."
+        },
+        {
+            "question": "What causes the red color of the sunset?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Dispersion"},
+                {"text": "Scattering"}
+            ],
+            "correctAnswer": "Scattering",
+            "explanation": "The red color of the sunset is caused by scattering of shorter blue wavelengths of light, leaving the longer red wavelengths to dominate."
+        },
+        {
+            "question": "What type of image is always formed by a convex lens if the object is between the lens and the focal point?",
+            "choices": [
+                {"text": "Real and inverted"},
+                {"text": "Virtual and upright"},
+                {"text": "Real and upright"},
+                {"text": "Virtual and inverted"}
+            ],
+            "correctAnswer": "Virtual and upright",
+            "explanation": "A convex lens forms a virtual and upright image when the object is placed between the lens and the focal point."
+        },
+        {
+            "question": "Which of the following best describes a concave lens?",
+            "choices": [
+                {"text": "Converging lens"},
+                {"text": "Diverging lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Convex lens"}
+            ],
+            "correctAnswer": "Diverging lens",
+            "explanation": "A concave lens is a diverging lens that spreads light rays apart and is used to correct nearsightedness."
+        },
+        {
+            "question": "What do you call the effect when light bends around the edges of an object?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Diffraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction occurs when light bends around the edges of an object, creating a spread of light waves."
+        },
+        {
+            "question": "What causes a mirage on a hot road surface?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Dispersion"},
+                {"text": "Diffraction"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "A mirage is caused by the refraction of light in the layers of hot air close to the road surface."
+        },
+        {
+            "question": "What do we call the distance between the optical center of a lens and its focal point?",
+            "choices": [
+                {"text": "Focal length"},
+                {"text": "Optical distance"},
+                {"text": "Lens distance"},
+                {"text": "Image distance"}
+            ],
+            "correctAnswer": "Focal length",
+            "explanation": "The focal length is the distance between the optical center of a lens and its focal point."
+        },
+        {
+            "question": "What part of the eye contains the photoreceptors for color vision?",
+            "choices": [
+                {"text": "Optic nerve"},
+                {"text": "Cornea"},
+                {"text": "Retina"},
+                {"text": "Iris"}
+            ],
+            "correctAnswer": "Retina",
+            "explanation": "The retina contains photoreceptors called cones that are responsible for color vision."
+        },
+        {
+            "question": "What happens to light when it passes from air to glass?",
+            "choices": [
+                {"text": "It speeds up"},
+                {"text": "It slows down"},
+                {"text": "It stays the same"},
+                {"text": "It reverses direction"}
+            ],
+            "correctAnswer": "It slows down",
+            "explanation": "Light slows down when it passes from air to a denser medium like glass, causing refraction."
+        },
+        {
+            "question": "What is the main cause of the blue color of the sky?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Scattering"},
+                {"text": "Absorption"}
+            ],
+            "correctAnswer": "Scattering",
+            "explanation": "The blue color of the sky is caused by scattering of shorter blue wavelengths of light by the Earth's atmosphere."
+        },
+        {
+            "question": "What is the bending of light around an obstacle called?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction is the bending of light around obstacles or through small openings."
+        },
+        {
+            "question": "What type of image does a convex mirror always produce?",
+            "choices": [
+                {"text": "Real and inverted"},
+                {"text": "Virtual and upright"},
+                {"text": "Real and upright"},
+                {"text": "Virtual and inverted"}
+            ],
+            "correctAnswer": "Virtual and upright",
+            "explanation": "A convex mirror always produces a virtual and upright image, no matter where the object is placed."
+        },
+        {
+            "question": "What is the process of light bending as it passes through different layers of air called?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Diffraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "Refraction occurs when light bends as it passes through layers of air with different temperatures and densities."
+        },
+        {
+            "question": "Which of the following is a property of convex lenses?",
+            "choices": [
+                {"text": "Diverge light rays"},
+                {"text": "Converge light rays"},
+                {"text": "Form virtual images"},
+                {"text": "Scatter light rays"}
+            ],
+            "correctAnswer": "Converge light rays",
+            "explanation": "Convex lenses converge light rays to a focal point and can form real images."
+        },
+        {
+            "question": "What is the name of the image formed when light rays converge?",
+            "choices": [
+                {"text": "Virtual image"},
+                {"text": "Real image"},
+                {"text": "Inverted image"},
+                {"text": "Upright image"}
+            ],
+            "correctAnswer": "Real image",
+            "explanation": "A real image is formed when light rays converge and can be projected onto a screen."
+        },
+        {
+            "question": "What is the name of the optical device used to correct astigmatism?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Cylindrical lens"},
+                {"text": "Bifocal lens"}
+            ],
+            "correctAnswer": "Cylindrical lens",
+            "explanation": "A cylindrical lens is used to correct astigmatism by compensating for the irregular curvature of the eye."
+        },
+        {
+            "question": "What does a magnifying glass use to make objects appear larger?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Plane mirror"},
+                {"text": "Convex mirror"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "A magnifying glass uses a convex lens to enlarge the appearance of objects by converging light rays."
+        },
+        {
+            "question": "What is the term for the change in direction of light when it hits a surface?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"},
+                {"text": "Diffraction"}
+            ],
+            "correctAnswer": "Reflection",
+            "explanation": "Reflection is the change in direction of light when it hits a surface and bounces back."
+        },
+        {
+            "question": "What type of light is used in night-vision devices?",
+            "choices": [
+                {"text": "Infrared light"},
+                {"text": "Ultraviolet light"},
+                {"text": "Visible light"},
+                {"text": "X-rays"}
+            ],
+            "correctAnswer": "Infrared light",
+            "explanation": "Night-vision devices use infrared light, which is not visible to the human eye, to create images in low-light conditions."
+        },
+        {
+            "question": "What is the unit of measurement for light intensity?",
+            "choices": [
+                {"text": "Lumens"},
+                {"text": "Watts"},
+                {"text": "Candelas"},
+                {"text": "Joules"}
+            ],
+            "correctAnswer": "Candelas",
+            "explanation": "Candelas measure the intensity of light emitted by a source."
+        },
+        {
+            "question": "Which of the following is NOT a type of lens?",
+            "choices": [
+                {"text": "Concave"},
+                {"text": "Convex"},
+                {"text": "Plano-convex"},
+                {"text": "Transverse"}
+            ],
+            "correctAnswer": "Transverse",
+            "explanation": "Transverse is not a type of lens; the others are types of optical lenses."
+        },
+        {
+            "question": "What phenomenon explains why the sky appears blue during the day?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Diffraction"},
+                {"text": "Scattering"},
+                {"text": "Reflection"}
+            ],
+            "correctAnswer": "Scattering",
+            "explanation": "Rayleigh scattering causes shorter blue wavelengths to scatter more than other colors, making the sky appear blue."
+        },
+        {
+            "question": "Which type of mirror is used in car side mirrors?",
+            "choices": [
+                {"text": "Concave mirror"},
+                {"text": "Convex mirror"},
+                {"text": "Plane mirror"},
+                {"text": "Bifocal mirror"}
+            ],
+            "correctAnswer": "Convex mirror",
+            "explanation": "Convex mirrors are used in car side mirrors to provide a wider field of view and reduce blind spots."
+        },
+        {
+            "question": "What is the primary purpose of a polarizing filter in photography?",
+            "choices": [
+                {"text": "Enhance color contrast"},
+                {"text": "Increase exposure"},
+                {"text": "Reduce glare"},
+                {"text": "Blur background"}
+            ],
+            "correctAnswer": "Reduce glare",
+            "explanation": "Polarizing filters are used to reduce glare from reflective surfaces and enhance color contrast."
+        },
+        {
+            "question": "What type of image does a concave lens always form?",
+            "choices": [
+                {"text": "Virtual and upright"},
+                {"text": "Real and inverted"},
+                {"text": "Real and upright"},
+                {"text": "Virtual and inverted"}
+            ],
+            "correctAnswer": "Virtual and upright",
+            "explanation": "A concave lens always forms a virtual and upright image regardless of the object's position."
+        },
+        {
+            "question": "What optical effect is responsible for the appearance of a rainbow?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"},
+                {"text": "Diffraction"}
+            ],
+            "correctAnswer": "Dispersion",
+            "explanation": "Rainbows are caused by dispersion of sunlight into its component colors as it passes through water droplets in the atmosphere."
+        },
+        {
+            "question": "What happens to light when it passes through a red filter?",
+            "choices": [
+                {"text": "It becomes green"},
+                {"text": "It becomes blue"},
+                {"text": "Only red light passes through"},
+                {"text": "All colors are absorbed"}
+            ],
+            "correctAnswer": "Only red light passes through",
+            "explanation": "A red filter allows only red wavelengths to pass through, absorbing all other colors."
+        },
+        {
+            "question": "What is the effect of using a telephoto lens in photography?",
+            "choices": [
+                {"text": "Wider field of view"},
+                {"text": "Closer view of distant objects"},
+                {"text": "Increased depth of field"},
+                {"text": "Less image distortion"}
+            ],
+            "correctAnswer": "Closer view of distant objects",
+            "explanation": "A telephoto lens magnifies distant subjects, making them appear closer and larger in the image."
+        },
+        {
+            "question": "Which type of light is commonly used in remote controls?",
+            "choices": [
+                {"text": "Visible light"},
+                {"text": "Ultraviolet light"},
+                {"text": "Infrared light"},
+                {"text": "X-rays"}
+            ],
+            "correctAnswer": "Infrared light",
+            "explanation": "Remote controls use infrared light to transmit signals to the receiving device."
+        },
+        {
+            "question": "What is the name of the effect where light bends when it passes through a small aperture?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction occurs when light waves encounter an obstacle or aperture and spread out."
+        },
+        {
+            "question": "What is the primary cause of chromatic aberration in lenses?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Diffraction"},
+                {"text": "Scattering"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Dispersion",
+            "explanation": "Chromatic aberration occurs due to dispersion, where different colors of light are bent by different amounts."
+        },
+        {
+            "question": "What does a prismatic spectrum represent?",
+            "choices": [
+                {"text": "Single wavelength of light"},
+                {"text": "Combined light waves"},
+                {"text": "Range of visible colors"},
+                {"text": "Infrared and ultraviolet light"}
+            ],
+            "correctAnswer": "Range of visible colors",
+            "explanation": "A prismatic spectrum shows the range of visible colors produced when white light is dispersed through a prism."
+        },
+        {
+            "question": "What is the purpose of an antireflective coating on glasses?",
+            "choices": [
+                {"text": "Reduce glare"},
+                {"text": "Increase durability"},
+                {"text": "Change color"},
+                {"text": "Improve contrast"}
+            ],
+            "correctAnswer": "Reduce glare",
+            "explanation": "Antireflective coatings are applied to reduce glare and reflections on the surface of glasses."
+        },
+        {
+            "question": "What part of the eye controls the amount of light entering it?",
+            "choices": [
+                {"text": "Lens"},
+                {"text": "Pupil"},
+                {"text": "Cornea"},
+                {"text": "Retina"}
+            ],
+            "correctAnswer": "Pupil",
+            "explanation": "The pupil adjusts its size to control the amount of light that enters the eye."
+        },
+        {
+            "question": "Which lens is used to correct farsightedness?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Cylindrical lens"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "Convex lenses are used to correct farsightedness by converging light rays to help focus on near objects."
+        },
+        {
+            "question": "What phenomenon causes the appearance of a shimmering effect on the surface of a pond?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Diffraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Reflection",
+            "explanation": "The shimmering effect on a pond's surface is due to the reflection of light off the water."
+        },
+        {
+            "question": "What optical effect causes a pencil to look bent when placed in a glass of water?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Diffraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "Refraction causes the pencil to appear bent due to the change in speed of light as it passes from air to water."
+        },
+        {
+            "question": "What type of lens is used in microscopes to magnify small objects?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Cylindrical lens"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "Microscopes use convex lenses to magnify small objects by converging light rays."
+        },
+        {
+            "question": "What is the main principle behind fiber optic communication?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Reflection",
+            "explanation": "Fiber optic communication relies on the principle of total internal reflection to transmit light signals through the fiber."
+        },
+        {
+            "question": "What is the role of the cornea in the eye?",
+            "choices": [
+                {"text": "Focus light on the retina"},
+                {"text": "Adjust the pupil size"},
+                {"text": "Protect the eye"},
+                {"text": "Detect color"}
+            ],
+            "correctAnswer": "Protect the eye",
+            "explanation": "The cornea provides protection to the eye and helps to focus light onto the retina."
+        },
+        {
+            "question": "What does a camera lens primarily do?",
+            "choices": [
+                {"text": "Store images"},
+                {"text": "Detect light"},
+                {"text": "Focus light onto film or sensor"},
+                {"text": "Control exposure time"}
+            ],
+            "correctAnswer": "Focus light onto film or sensor",
+            "explanation": "A camera lens focuses light onto film or a sensor to capture images."
+        },
+        {
+            "question": "Which type of wave behavior causes a rainbow to form?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Scattering"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "Rainbows are formed due to the refraction of light in water droplets, which disperses light into its constituent colors."
+        },
+        {
+            "question": "Which part of the eye contains photoreceptor cells?",
+            "choices": [
+                {"text": "Retina"},
+                {"text": "Cornea"},
+                {"text": "Lens"},
+                {"text": "Iris"}
+            ],
+            "correctAnswer": "Retina",
+            "explanation": "The retina contains photoreceptor cells (rods and cones) that detect light and send signals to the brain."
+        },
+        {
+            "question": "What is the primary use of a convex lens in a magnifying glass?",
+            "choices": [
+                {"text": "To focus light into a beam"},
+                {"text": "To enlarge images"},
+                {"text": "To correct vision"},
+                {"text": "To reflect light"}
+            ],
+            "correctAnswer": "To enlarge images",
+            "explanation": "A convex lens in a magnifying glass enlarges the image of an object by focusing light."
+        },
+        {
+            "question": "What property of light is responsible for creating a shadow?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Absorption"},
+                {"text": "Diffraction"}
+            ],
+            "correctAnswer": "Absorption",
+            "explanation": "Shadows are created when an object absorbs light and blocks it from reaching the surface behind it."
+        },
+        {
+            "question": "Which phenomenon causes the colors in a soap bubble to change?",
+            "choices": [
+                {"text": "Reflection"},
+                {"text": "Refraction"},
+                {"text": "Interference"},
+                {"text": "Diffraction"}
+            ],
+            "correctAnswer": "Interference",
+            "explanation": "The colors in a soap bubble change due to interference of light waves reflecting off the inner and outer surfaces of the bubble."
+        },
+        {
+            "question": "What happens to light as it travels through a prism?",
+            "choices": [
+                {"text": "It speeds up"},
+                {"text": "It disperses into a spectrum"},
+                {"text": "It becomes polarized"},
+                {"text": "It reflects off the surface"}
+            ],
+            "correctAnswer": "It disperses into a spectrum",
+            "explanation": "A prism disperses light into its component colors, creating a spectrum."
+        },
+        {
+            "question": "Which type of lens is used to correct nearsightedness?",
+            "choices": [
+                {"text": "Convex lens"},
+                {"text": "Concave lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Plano-convex lens"}
+            ],
+            "correctAnswer": "Concave lens",
+            "explanation": "Concave lenses are used to correct nearsightedness by diverging light rays to help focus on distant objects."
+        },
+        {
+            "question": "What is the cause of the shimmering effect seen on a hot road surface?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Diffraction"},
+                {"text": "Scattering"}
+            ],
+            "correctAnswer": "Refraction",
+            "explanation": "The shimmering effect on a hot road surface is caused by the refraction of light through varying air temperatures."
+        },
+        {
+            "question": "Which part of the eye adjusts its shape to focus on objects at different distances?",
+            "choices": [
+                {"text": "Iris"},
+                {"text": "Lens"},
+                {"text": "Cornea"},
+                {"text": "Pupil"}
+            ],
+            "correctAnswer": "Lens",
+            "explanation": "The lens adjusts its shape to change the focus of light onto the retina for clear vision at various distances."
+        },
+        {
+            "question": "What is the term for the bending of light around an obstacle?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction is the bending of light waves around an obstacle or edge."
+        },
+        {
+            "question": "What type of image is formed by a plane mirror?",
+            "choices": [
+                {"text": "Real and inverted"},
+                {"text": "Virtual and upright"},
+                {"text": "Real and upright"},
+                {"text": "Virtual and inverted"}
+            ],
+            "correctAnswer": "Virtual and upright",
+            "explanation": "A plane mirror forms a virtual and upright image that is the same size as the object."
+        },
+        {
+            "question": "What is the primary use of a reflecting telescope?",
+            "choices": [
+                {"text": "To magnify distant objects"},
+                {"text": "To correct vision"},
+                {"text": "To focus light into a camera"},
+                {"text": "To disperse light into a spectrum"}
+            ],
+            "correctAnswer": "To magnify distant objects",
+            "explanation": "Reflecting telescopes use mirrors to gather and magnify light from distant objects in space."
+        },
+        {
+            "question": "Which of the following is an application of total internal reflection?",
+            "choices": [
+                {"text": "Fiber optics"},
+                {"text": "Polarizing filters"},
+                {"text": "Diffraction gratings"},
+                {"text": "Prisms"}
+            ],
+            "correctAnswer": "Fiber optics",
+            "explanation": "Fiber optics rely on total internal reflection to transmit light signals through fibers with minimal loss."
+        },
+        {
+            "question": "What is the term for the separation of light into its component colors?",
+            "choices": [
+                {"text": "Refraction"},
+                {"text": "Dispersion"},
+                {"text": "Reflection"},
+                {"text": "Scattering"}
+            ],
+            "correctAnswer": "Dispersion",
+            "explanation": "Dispersion occurs when light is separated into its component colors, as seen in rainbows."
+        },
+        {
+            "question": "What is the effect of using a red filter on a white light source?",
+            "choices": [
+                {"text": "Light turns blue"},
+                {"text": "Light turns green"},
+                {"text": "Only red light is transmitted"},
+                {"text": "Light turns yellow"}
+            ],
+            "correctAnswer": "Only red light is transmitted",
+            "explanation": "A red filter allows only red light to pass through, absorbing all other colors of light."
+        },
+        {
+            "question": "Which part of the eye is responsible for sharp central vision?",
+            "choices": [
+                {"text": "Retina"},
+                {"text": "Lens"},
+                {"text": "Cornea"},
+                {"text": "Macula"}
+            ],
+            "correctAnswer": "Macula",
+            "explanation": "The macula is responsible for sharp central vision and is located in the center of the retina."
+        },
+        {
+            "question": "What optical device uses a combination of lenses and mirrors to magnify objects?",
+            "choices": [
+                {"text": "Telescope"},
+                {"text": "Microscope"},
+                {"text": "Camera"},
+                {"text": "Binoculars"}
+            ],
+            "correctAnswer": "Microscope",
+            "explanation": "A microscope uses a combination of lenses to magnify small objects for detailed observation."
+        },
+        {
+            "question": "Which of the following is used to correct astigmatism?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Cylindrical lens"},
+                {"text": "Bifocal lens"}
+            ],
+            "correctAnswer": "Cylindrical lens",
+            "explanation": "Cylindrical lenses are used to correct astigmatism by compensating for irregularities in the eye's curvature."
+        },
+        {
+            "question": "What is the phenomenon where light is bent as it passes through a small opening?",
+            "choices": [
+                {"text": "Diffraction"},
+                {"text": "Refraction"},
+                {"text": "Reflection"},
+                {"text": "Dispersion"}
+            ],
+            "correctAnswer": "Diffraction",
+            "explanation": "Diffraction occurs when light waves bend around edges and openings, causing spreading of light."
+        },
+        {
+            "question": "What happens to light when it travels from air to water?",
+            "choices": [
+                {"text": "It speeds up"},
+                {"text": "It bends away from the normal"},
+                {"text": "It bends towards the normal"},
+                {"text": "It changes color"}
+            ],
+            "correctAnswer": "It bends towards the normal",
+            "explanation": "When light travels from air to water, it slows down and bends towards the normal due to refraction."
+        },
+        {
+            "question": "What does the term 'focus' refer to in optics?",
+            "choices": [
+                {"text": "The point where light rays converge"},
+                {"text": "The point where light rays diverge"},
+                {"text": "The angle of incidence"},
+                {"text": "The distance between the lens and the object"}
+            ],
+            "correctAnswer": "The point where light rays converge",
+            "explanation": "In optics, the focus is the point where light rays converge after passing through a lens or mirror."
+        },
+        {
+            "question": "What type of lens would you use to correct farsightedness?",
+            "choices": [
+                {"text": "Concave lens"},
+                {"text": "Convex lens"},
+                {"text": "Bifocal lens"},
+                {"text": "Plano-convex lens"}
+            ],
+            "correctAnswer": "Convex lens",
+            "explanation": "Convex lenses are used to correct farsightedness by converging light rays to focus on the retina."
+        },
+        {
+            "question": "What effect does a converging lens have on parallel light rays?",
+            "choices": [
+                {"text": "It causes them to diverge"},
+                {"text": "It causes them to converge at a point"},
+                {"text": "It reflects them back"},
+                {"text": "It disperses them into a spectrum"}
+            ],
+            "correctAnswer": "It causes them to converge at a point",
+            "explanation": "A converging lens bends parallel light rays to meet at a single point, called the focus."
+        }
+    ]
+}
